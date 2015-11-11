@@ -6,6 +6,7 @@ package friendly.test;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.format.Time;
 import android.view.View;
 import android.widget.Button;
 
@@ -24,6 +25,11 @@ public class SensingView extends Activity{
         wake_up_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //起床時刻を保存
+                Time time = new Time("Asia/Tokyo");
+                time.setToNow();
+                
+
                 //TOP画面へ遷移 応急処置？最適解なのかわからない
                 finish();
             }
